@@ -1,0 +1,83 @@
+Script started on 2022-02-05 05:26:44-10:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="114" LINES="117"]
+]0;craig@deathstar-01: ~/Git/lisp_small_functions[01;32mcraig@deathstar-01[00m:[01;34m~/Git/lisp_small_functions[00m$ sbcl --load opieca2.lisp
+This is SBCL 2.0.1.debian, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+* (id 313 2)
+Name: Craig Opie
+Course: ICS313
+Assignment # 2
+NIL
+* (id '() 2)
+Error: Course not provided.
+NIL
+* (id '(a) 3)
+Error: Course should not be a list.
+NIL
+* (id -1 2)
+Error: Course should be greater than zero.
+NIL
+* (id 313 '())
+Error: Assignment not provided.
+NIL
+* (id 313 '(a))
+Error: Assignment should not be a list.
+NIL
+* (id 313 -2)
+Error: Assignment should be greater than zero.
+NIL
+* (firstlast '(a b c))
+(A C)
+* (firstlast '(a b c d e f))
+(A F)
+* (firstlad st '(1 2 c d 4))
+(1 4)
+* (firstlast '())
+Error: List must not be empty.
+NIL
+* (firstlast "acd")
+Error: Argument must be a list.
+NIL
+* (firstlast '(a))
+Error: The list must be two or more items.
+NIL
+* (firstlast '(a b))
+(A B)
+* (alphabet '(a b z))
+(1 2 26)
+* (alphabet '())
+NIL
+* (alphabet "foo")
+Error: Argument must be a list.
+NIL
+* (alphabet 1)
+Error: Argument must be a list.
+NIL
+* (alphabet '(A a B b C c))
+(1 1 2 2 3 3)
+* (typecheck '(a b c))
+((SYMBOL T) (SYMBOL T) (SYMBOL T))
+* (typecheck ())
+((NULL))
+* (typecheck '(1 "two" (3 4) ()))
+((NUMBER T) (STRING T) (LIST T) (NULL))
+* (filtertype 'number '(a 2 (3 4) b))
+(A (3 4) B)
+* (filtertype 'nil '(a () (b c) nil))^[[D^[[D^[[D                                 ull '(a () (bc  c) nil))
+(A (B C))
+* (filtertype 'blah '(a b c))
+Error: First argument must be a valid type name.
+NIL
+* filterty        (filtertype 'number '(a (1)     1 (a b  ) 4))
+(A (A B))
+* (filtertype 'string '("string" 1 (a b) a))
+(1 (A B) A)
+* (quit)
+]0;craig@deathstar-01: ~/Git/lisp_small_functions[01;32mcraig@deathstar-01[00m:[01;34m~/Git/lisp_small_functions[00m$ exit
+exit
+
+Script done on 2022-02-05 05:33:46-10:00 [COMMAND_EXIT_CODE="0"]
